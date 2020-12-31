@@ -1,0 +1,54 @@
+The 'task11' module
+==================
+>>> from task11 import Player
+>>> from task11 import deferred_acceptance
+
+----------
+example 1
+----------
+>>> s0 = Player([3, 2, 1], 0)
+>>> s1 = Player([3, 1, 2], 1)
+>>> s2 = Player([2, 1, 3], 2)
+>>> d0 = Player([3, 1, 2], 0)
+>>> d1 = Player([1, 2, 3], 1)
+>>> d2 = Player([1, 3, 2], 2)
+>>> deferred_acceptance([s0, s1, s2], [d0, d1, d2])
+Department: 0 with student 2
+Department: 1 with student 1
+Department: 2 with student 0
+
+----------
+example 2
+----------
+
+>>> s0 = Player([1, 2], 0)
+>>> s1 = Player([1, 2], 1)
+>>> d0 = Player([1, 2], 0)
+>>> d1 = Player([1, 2], 1)
+>>> deferred_acceptance([s0, s1], [d0, d1])
+Department: 0 with student 0
+Department: 1 with student 1
+
+----------
+example 3
+----------
+
+>>> s0 = Player([1, 2], 0)
+>>> s1 = Player([1, 2], 1)
+>>> d0 = Player([2, 1], 0)
+>>> d1 = Player([1, 2], 1)
+>>> deferred_acceptance([s0, s1], [d0, d1])
+Department: 0 with student 1
+Department: 1 with student 0
+
+----------
+example 4
+----------
+
+>>> s0 = Player([1, 2], 0)
+>>> s1 = Player([2, 1], 1)
+>>> d0 = Player([1, 2], 0)
+>>> d1 = Player([2, 1], 1)
+>>> deferred_acceptance([s0, s1], [d0, d1])
+Department: 0 with student 0
+Department: 1 with student 1
